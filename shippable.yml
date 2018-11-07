@@ -5,6 +5,8 @@ jdk:
 
 build:
   ci:
+    - java -version
+    - mvn --version
     - mvn clean test
 
 notifications:
