@@ -5,6 +5,7 @@ jdk:
 
 build:
   ci:
+    - source shipctl jdk set openjdk10
     - java -version
     - mvn --version
     - mvn clean test
