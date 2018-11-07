@@ -5,8 +5,7 @@ jdk:
 
 build:
   ci:
-    - mvn clean cobertura:cobertura
-    - mvn test
+    - mvn clean test
 
 notifications:
    email: false
