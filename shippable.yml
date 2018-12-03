@@ -8,7 +8,7 @@ build:
     - java -version
     - mvn --version
     - gradle --version
-    - source shipctl jdk set oraclejdk10
+    - source shipctl jdk set oraclejdk11
     - java -version
     - mvn --version
     - gradle --version
