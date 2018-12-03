@@ -5,10 +5,12 @@ jdk:
 
 build:
   ci:
+    - echo $PATH
     - java -version
     - mvn --version
     - gradle --version
     - source shipctl jdk set oraclejdk11
+    - echo $PATH
     - java -version
     - mvn --version
     - gradle --version
