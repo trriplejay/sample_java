@@ -1,14 +1,18 @@
 language: java
 
 jdk:
-   - openjdk10
+   - oraclejdk8
 
 build:
   ci:
-    - source shipctl jdk set openjdk10
     - java -version
     - mvn --version
-    - mvn clean test
+    - gradle --version
+    - source shipctl jdk set oraclejdk10
+    - java -version
+    - mvn --version
+    - gradle --version
+    #- mvn clean test
 
 notifications:
    email: false
