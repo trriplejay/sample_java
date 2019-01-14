@@ -19,7 +19,7 @@ build:
     - dpkg --purge --force-depends ca-certificates-java
     - apt-get install ca-certificates-java
     #- sudo update-ca-certificates -f
-    #- sudo /var/lib/dpkg/info/ca-certificates-java.postinst configure
+    - sudo /var/lib/dpkg/info/ca-certificates-java.postinst configure
     #- mvn clean test
 
 notifications:
