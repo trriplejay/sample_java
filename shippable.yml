@@ -10,7 +10,7 @@ build:
     - java -version
     - mvn --version
     - gradle --version
-    - source shipctl jdk set oraclejdk8
+    - source shipctl jdk set oraclejdk11
     - echo $JAVA_HOME
     - echo $PATH
     - java -version
