@@ -16,9 +16,10 @@ build:
     - java -version
     - mvn --version
     - gradle --version
+    - dpkg --purge --force-depends ca-certificates-java
     - apt-get install ca-certificates-java
-    - sudo update-ca-certificates -f
-    - sudo /var/lib/dpkg/info/ca-certificates-java.postinst configure
+    #- sudo update-ca-certificates -f
+    #- sudo /var/lib/dpkg/info/ca-certificates-java.postinst configure
     #- mvn clean test
 
 notifications:
