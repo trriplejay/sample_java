@@ -3,14 +3,17 @@ language: java
 jdk:
    - oraclejdk8
 
-env:
-  global:
-    - EXAMPLE[0]=1404
-    - EXAMPLE[1]=1604
-    - EXAMPLE[2]=1804
+#env:
+#  global:
+#    - EXAMPLE[0]=1404
+#    - EXAMPLE[1]=1604
+#    - EXAMPLE[2]=1804
 
 build:
   ci:
+    - EXAMPLE[0]=1404
+    - EXAMPLE[1]=1604
+    - EXAMPLE[2]=1804
     - echo "Example '${EXAMPLE}'"
     - for e in "${EXAMPLE[@]}"; do echo "e-> '${e}'"; done
     - echo $JAVA_HOME
