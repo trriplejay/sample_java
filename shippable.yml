@@ -9,8 +9,8 @@ env:
 
 build:
   ci:
-    - echo "Example: '${EXAMPLE}'"
-    - for e in "${EXAMPLE[@]}"; do echo "e: '${e}'"; done
+    - echo "Example '${EXAMPLE}'"
+    - for e in "${EXAMPLE[@]}"; do echo "e-> '${e}'"; done
     - echo $JAVA_HOME
     - echo $PATH
     - java -version
