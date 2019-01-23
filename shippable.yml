@@ -5,7 +5,7 @@ jdk:
 
 env:
   global:
-    - EXAMPLE[0]=1404 #( '1404' '1604' '1804' )
+    - EXAMPLE[0]=1404
     - EXAMPLE[1]=1604
     - EXAMPLE[2]=1804
 
