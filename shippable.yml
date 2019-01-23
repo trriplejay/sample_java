@@ -3,8 +3,14 @@ language: java
 jdk:
    - oraclejdk8
 
+env:
+  global:
+    - EXAMPLE: ( '1404' '1604' '1804' )
+
 build:
   ci:
+    - echo "Example: '${EXAMPLE}'"
+    - for e in "${EXAMPLE[@]}"; do echo "e: '${e}'"; done
     - echo $JAVA_HOME
     - echo $PATH
     - java -version
