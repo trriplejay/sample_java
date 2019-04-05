@@ -1,7 +1,7 @@
 language: java
 
-jdk:
-   - oraclejdk8
+# jdk:
+#    - oraclejdk8
 
 #env:
 #  global:
@@ -9,7 +9,14 @@ jdk:
 #    - EXAMPLE[1]=1604
 #    - EXAMPLE[2]=1804
 
+runtime:
+  nodePool: c7-dyna
+
 build:
+  pre_ci_boot:
+    image_name: drydock/c7javall
+    image_tag: v7.2.4
+    pull: true
   ci:
     - EXAMPLE[0]=1404
     - EXAMPLE[1]=1604
@@ -21,16 +28,16 @@ build:
     - java -version
     - mvn --version
     - gradle --version
-    - source shipctl jdk set oraclejdk11
-    - echo $JAVA_HOME
-    - echo $PATH
-    - java -version
-    - mvn --version
-    - gradle --version
-    - dpkg --purge --force-depends ca-certificates-java
-    - apt-get install ca-certificates-java
+#     - source shipctl jdk set oraclejdk11
+#     - echo $JAVA_HOME
+#     - echo $PATH
+#     - java -version
+#     - mvn --version
+#     - gradle --version
+#     - dpkg --purge --force-depends ca-certificates-java
+#     - apt-get install ca-certificates-java
     #- sudo update-ca-certificates -f
-    - sudo /var/lib/dpkg/info/ca-certificates-java.postinst configure
+#     - sudo /var/lib/dpkg/info/ca-certificates-java.postinst configure
     #- mvn clean test
 
 notifications:
